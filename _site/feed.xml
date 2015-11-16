@@ -6,13 +6,46 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 10 Nov 2015 20:51:57 +0800</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2015 20:51:57 +0800</lastBuildDate>
+    <pubDate>Mon, 16 Nov 2015 23:40:48 +0800</pubDate>
+    <lastBuildDate>Mon, 16 Nov 2015 23:40:48 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
+        <title>EPAM Hackfest!</title>
+        <description>&lt;p&gt;It was very great experience to join the &lt;a href=&quot;www.epam.com&quot;&gt;EPAM&lt;/a&gt; hackfest last week. &lt;a href=&quot;https://en.wikipedia.org/wiki/Hackathon&quot;&gt;Hackfest&lt;/a&gt; (also called hackathon) is an event that need to coding for 24 hours to make a product. The most challenge thing is to build a software or a demo in limited time.&lt;/p&gt;
+
+&lt;p&gt;This event was hold in ShenZhen nice place for those who want to build their career. It was my first time to join such activity so I went there alone. But if you got team and it will bring you very different experience. The match ground looks like an internet company, it provided the free wifi, food, drink, bathroom and the beer!&lt;/p&gt;
+
+&lt;p&gt;The hackfest began with a great lecture hold by &lt;a href=&quot;www.epam.com&quot;&gt;EPAM&lt;/a&gt; they showed you what hackathon looks like and how to get succeed in the match（actually it works).&lt;/p&gt;
+
+&lt;p&gt;We made a team there one big guy from Bay Area was data scientist of &lt;a href=&quot;www.facebook.com&quot;&gt;Facebook&lt;/a&gt; another guy is a self employee and good at javascript programming. The fourth buddy left us due to we still not got the idea for what we are going to do after the match started 2 hours ago. So the most important thing for the event is an idea, if you got a great idea you already won half of the match. After the brain storm with my teammates we determine to build a tool help us to hack the hackathon. If it not win the match we still could use it for next time.&lt;/p&gt;
+
+&lt;p&gt;The coding activity lasted for 20 hours about 1 days. Around the middle night of the 1st day, they run out of free coke. Many people went to sleep, just few buddy still debug there code. And we already build a prototype for our program, but the data still a big problem. We tried many kind of ways to download the history hackathon data. But still so hard to analysis. Finally our big guy found a useful tool called &lt;a href=&quot;https://import.io&quot;&gt;Import.io&lt;/a&gt; to fetch the data. The data already sorted and classified by the tool. And we could analysis the data and draw the chart.&lt;/p&gt;
+
+&lt;p&gt;All the participants need to push their code to the &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt; for final judgement. Before the presentation we keep on clicking the ‘refesh’ button on our web broswer because of the unstable wifi. But it worse less. Nothing could make sure everything goes well unless you have a backup plan. During the presentation we have to switch to the another pc because my laptop suddenly could not connect to our server.&lt;/p&gt;
+
+&lt;p&gt;The result if less important right?&lt;/p&gt;
+
+&lt;p&gt;The most important thing in the hackfest is coding for fun and what you learned from others. Ok, let’s cheer for the winner.&lt;/p&gt;
+
+&lt;p&gt;Some tips for hackathon:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Coding for fun.&lt;/li&gt;
+  &lt;li&gt;Challenge yourself.&lt;/li&gt;
+  &lt;li&gt;Great idea&lt;/li&gt;
+  &lt;li&gt;Your own tech stack&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 17 Nov 2015 04:30:00 +0800</pubDate>
+        <link>http://rex-zhou.github.io/2015/11/17/epam-hackathon.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/17/epam-hackathon.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Welcome to Reactor!</title>
-        <description>&lt;p&gt;Hello guys, thanks for your time to visit this space. This is the first post, so still empty here. I’ll keep on update in the future ;)&lt;/p&gt;
+        <description>&lt;p&gt;Hello guys, thanks for your time to visit this space. This is the first post, so still empty here. I’ll keep on updating in the future ;)&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 Nov 2015 04:30:00 +0800</pubDate>
         <link>http://rex-zhou.github.io/2015/11/11/welcome-to-reactor.html</link>
