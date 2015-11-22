@@ -2,7 +2,6 @@
 layout: post
 title:  "Pragmatic Programmer"
 date:   2015-11-22 18:49:39
-categories: Programmer
 ---
 This article for those people who want to be more pragmatic in their daily life.
 Most of the aspect mentioned below come from the real problem I meat in work. Those
