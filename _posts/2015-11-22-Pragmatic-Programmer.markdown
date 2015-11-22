@@ -3,6 +3,7 @@ layout: post
 title:  "Pragmatic Programmer"
 date:   2015-11-22 18:49:39
 ---
+
 This article for those people who want to be more pragmatic in their daily life.
 Most of the aspect mentioned below come from the real problem I meat in work. Those
 just about some basic skill that a programmer should have, if you want more need
