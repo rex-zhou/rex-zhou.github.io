@@ -6,9 +6,136 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 19 Nov 2015 22:06:55 +0800</pubDate>
-    <lastBuildDate>Thu, 19 Nov 2015 22:06:55 +0800</lastBuildDate>
+    <pubDate>Mon, 23 Nov 2015 01:18:41 +0800</pubDate>
+    <lastBuildDate>Mon, 23 Nov 2015 01:18:41 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Pragmatic Programmer</title>
+        <description>&lt;p&gt;This article for those people who want to be more pragmatic in their daily life.
+Most of the aspect mentioned below come from the real problem I meat in work. Those
+just about some basic skill that a programmer should have, if you want more need
+to find them yourself.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-editor&quot;&gt;An Editor&lt;/h3&gt;
+&lt;p&gt;This is most important part in your daily working. You need to write your code,
+process text, analysis the log and write the documents. Someone prefer to use an
+IDE to write their code. That’s a really good habit for collaborate working. You can
+easily import you coding standard configuration make sure all of your partner writing
+code follow the same guideline.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/idea/&quot;&gt;IntelliJ IDEA&lt;/a&gt; One of the most powerful IDE. Great
+designed for code refactor, code inception and lots of useful plugin.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt; A text editor developed by &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;. It
+has thousands of open source packages, and you can also hacked it yourself.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt; A light weight font-end text editor
+ developed by Microsoft. Now it just supports Javascript and ASP.NET maybe more feature in the future version.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;www.vim.org&quot;&gt;Vim&lt;/a&gt; A must well used editor for back-end developer. It is hard to learn, but easy to use.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After you picked up your favorite editor, there are several steps need to concern.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setup your favorite color theme, coding and font. Because you may need to type for a long time.&lt;/li&gt;
+  &lt;li&gt;Setup your coding standard and plugin, make sure all of your environment follow the same guideline.&lt;/li&gt;
+  &lt;li&gt;Be familiar with your editor’s keybindings. Don’t make your hand break your mind. You can easily add
+ a line, drop a line, replace some code and so on.&lt;/li&gt;
+  &lt;li&gt;Some editor well integrated with &lt;a href=&quot;http://www.git-scm.com/&quot;&gt;Git&lt;/a&gt;, make sure you know the meaning.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;version-control-system&quot;&gt;Version Control System&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;VCS&lt;/a&gt; not only for your code, also for your documents. Then you can
+easily roll back to the former version or compare with the different version. Some of the documents type
+such as word and excel are not suit for the VCS to compare, try the &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;markdown&lt;/a&gt; file. Some of the above editors already support
+the preview of the markdown file which are really great feature.&lt;/p&gt;
+
+&lt;p&gt;I recommend &lt;a href=&quot;http://www.git-scm.com/&quot;&gt;GIT&lt;/a&gt; as the default VCS. If you do not know how to use it
+&lt;a href=&quot;http://try.github.com/&quot;&gt;this online guide&lt;/a&gt; can give you a short view on git. If you already a git
+master &lt;a href=&quot;http://www.git-scm.com/book/en/v2&quot;&gt;this free book&lt;/a&gt; can also give you more info about it.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-programming-language&quot;&gt;The Programming Language&lt;/h3&gt;
+&lt;p&gt;It is necessary to master a language in your work. Make sure you know the language feature in different version.
+If it is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;object-oriented&lt;/a&gt; language, you also need
+to know some OOP design principle. Here’s a check list please make sure you already take in charge of it.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The language standard library(Data structure, File, Network, Thread model).&lt;/li&gt;
+  &lt;li&gt;The language memory model(GC or manual allocated).&lt;/li&gt;
+  &lt;li&gt;The common used third-party library(reduce the common mistake for build wheel.&lt;/li&gt;
+  &lt;li&gt;The common used data structure of the language(collections, hashtable).&lt;/li&gt;
+  &lt;li&gt;The I/O library(Also the network).&lt;/li&gt;
+  &lt;li&gt;The common used algo that already contains in the standard library(Binary search, sorting).&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;http://www.oodesign.com/&quot;&gt;design pattern&lt;/a&gt; used for the language.&lt;/li&gt;
+  &lt;li&gt;Try to make it reactive(http://www.reactivemanifesto.org/).&lt;/li&gt;
+  &lt;li&gt;Having a toolkit that you can fast build a system from zero(&lt;a href=&quot;http://projects.spring.io/spring-boot/&quot;&gt;Spring-Boot&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;The testing framework(&lt;em&gt;really import&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;a-second-language-for-your-daily-job&quot;&gt;A second language for your daily job.&lt;/h4&gt;
+&lt;p&gt;Sometimes we need to process some data in a very short time or to build up a tiny
+system to do some testing job. Then we need a language that can solve the problem very quickly.
+&lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;, &lt;a href=&quot;http://rubyonrails.org/&quot;&gt;Ruby&lt;/a&gt; and &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node&lt;/a&gt; have some
+magic to help you do those things. Then you need to know:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How to build a web server.&lt;/li&gt;
+  &lt;li&gt;How to build a RESTful services.&lt;/li&gt;
+  &lt;li&gt;How to manipulate and export data from database.&lt;/li&gt;
+  &lt;li&gt;How to process CSV file.&lt;/li&gt;
+  &lt;li&gt;How to process XML file.&lt;/li&gt;
+  &lt;li&gt;How to process JSON data file.&lt;/li&gt;
+  &lt;li&gt;How to process your log file.&lt;/li&gt;
+  &lt;li&gt;How to simulate network request and response for testing.&lt;/li&gt;
+  &lt;li&gt;How to fetch data from internet or web page.&lt;/li&gt;
+  &lt;li&gt;Regular Expression(&lt;em&gt;It is ok to put it here?&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-operation-system&quot;&gt;The Operation System&lt;/h3&gt;
+&lt;p&gt;No matter what operation system(Windows, Linux, Unix, Mac OS) you are using. Better to know some basic knowledge
+ about it. Make sure you can handle some problem yourself. Such as setup your account, install and remove software.
+ Know some benchmark of your system such as memory usage, CPU usage, network I/O usage. There’s a must know list below:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A shell for your OS(&lt;a href=&quot;https://technet.microsoft.com/en-us/library/bb978526.aspx&quot;&gt;Power shell&lt;/a&gt; for Windows. &lt;a href=&quot;https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29&quot;&gt;Bash&lt;/a&gt; for *nix).&lt;/li&gt;
+  &lt;li&gt;System diagnosis command(&lt;code&gt;top&lt;/code&gt;,&lt;code&gt;ifconig&lt;/code&gt;,&lt;code&gt;netstat&lt;/code&gt;,&lt;code&gt;df&lt;/code&gt;…).&lt;/li&gt;
+  &lt;li&gt;File and directory manipulating command(&lt;code&gt;rm&lt;/code&gt;,&lt;code&gt;mkdir&lt;/code&gt;,&lt;code&gt;chmod&lt;/code&gt;…).&lt;/li&gt;
+  &lt;li&gt;File watching command(&lt;code&gt;more&lt;/code&gt;, &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;tail&lt;/code&gt;…).&lt;/li&gt;
+  &lt;li&gt;File process command(&lt;code&gt;sed&lt;/code&gt;, &lt;code&gt;awk&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of the above skill just make sure you have basic knowledge for being a programmer. But you still need
+to do more to make you outstanding.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-next&quot;&gt;What’s Next&lt;/h3&gt;
+&lt;p&gt;I know, some of you already good at all the mentioned above. You still want more right? Ok I will show you more
+about what I think necessary for a pragmatic programmer should have.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A Web developing framework from front to back-end. This will help to build some useful tools for yourself. Now web is
+not just a website, it more like a app. You can also use it in your mobile device by responsive design. I recommend &lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;Django&lt;/a&gt; for python, &lt;a href=&quot;http://rubyonrails.org/&quot;&gt;Rails&lt;/a&gt; for ruby, &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; for node, &lt;a href=&quot;http://spring.io/&quot;&gt;Spring-MVC&lt;/a&gt; for java. Just use it and improve it. Do not hate it.&lt;/li&gt;
+  &lt;li&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_integration&quot;&gt;continuous integration&lt;/a&gt; system. Most of the time a programmer need to work with others. So the collaboration is really import. To make your software need to make it earlier integrate and earlier test. A CI system will really help you to do that job. &lt;a href=&quot;https://www.jetbrains.com/teamcity/&quot;&gt;TeamCity&lt;/a&gt; and &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt; are really good at it.&lt;/li&gt;
+  &lt;li&gt;Software developing method. No matter you are using waterfall or agile. You need know how to run them unless you are the single soldier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To be a pragmatic programmer is a very hard road. You need to practice every day and try many different ways. If you have more advice for it. An email is welcome. Hope you enjoy this article. :)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 23 Nov 2015 02:49:39 +0800</pubDate>
+        <link>http://rex-zhou.github.io/programmer/2015/11/23/Pragmatic-Programmer.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/programmer/2015/11/23/Pragmatic-Programmer.html</guid>
+        
+        
+        <category>programmer</category>
+        
+      </item>
     
       <item>
         <title>EPAM Hackfest!</title>
