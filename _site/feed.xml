@@ -6,9 +6,52 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 23 Nov 2015 01:27:14 +0800</pubDate>
-    <lastBuildDate>Mon, 23 Nov 2015 01:27:14 +0800</lastBuildDate>
+    <pubDate>Sun, 29 Nov 2015 16:03:43 +0800</pubDate>
+    <lastBuildDate>Sun, 29 Nov 2015 16:03:43 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>How to build a small FX trading system</title>
+        <description>&lt;p&gt;Last month just finished a trading game in my corp. From zero to one to build a trading system is a great experience. This post just a brief to make a trading system from zero to one. If you want to talk more, please contact me at the below link.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-a-trading-system&quot;&gt;What is a trading system&lt;/h3&gt;
+&lt;p&gt;From &lt;a href=&quot;http://www.investopedia.com/university/tradingsystems/tradingsytems1.asp&quot;&gt;investopedia&lt;/a&gt; we can conclude that a trading system is a simply a group of specific rules, or parameters, that determine entry and exit point for a given equity. So we can infer that there are several point for a trading system.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Trading rules(the algorithm)&lt;/li&gt;
+  &lt;li&gt;Signal&lt;/li&gt;
+  &lt;li&gt;Execution system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So your trading system need to be designed base on those above rules. You need watching the market data, analysis the data if it matches your algorithm, send the order to the exchange system and wait for the execution result and hold your position.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-basic-info-for-fx-trading&quot;&gt;Some basic info for FX trading&lt;/h3&gt;
+&lt;p&gt;Before you setup your system, there are some basic terminology you should know.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;a href=&quot;http://www.investopedia.com/terms/c/currencypair.asp&quot;&gt;currency pair&lt;/a&gt;. This is the quotation and pricing structure of the currencies traded in the forex market. For example USD/CHF, the first currency of a currency pair is called the “base currency”, and the second currency is called the “quote currency”.&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;http://www.investopedia.com/terms/p/position.asp&quot;&gt;position&lt;/a&gt;. The amount of a symbol(such as USD/CHF) either owned(long position) or borrowed(short position).&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;http://www.investopedia.com/terms/t/take-profitorder.asp&quot;&gt;take profit order&lt;/a&gt;. An order to close out current position for a profit.&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;http://www.investopedia.com/terms/s/stop-lossorder.asp&quot;&gt;stop loss order&lt;/a&gt;. An order to limit the current position in a security.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pick-up-your-tech-stack-and-write-your-program&quot;&gt;Pick up your tech stack and write your program&lt;/h3&gt;
+&lt;p&gt;First of all, choose an environment to host your program. Because the game hold in my crop are based on the cloud platform &lt;a href=&quot;https://www.cloudfoundry.org/&quot;&gt;CloudFoundry&lt;/a&gt;. So my program was built on this &lt;a href=&quot;https://en.wikipedia.org/wiki/Platform_as_a_service&quot;&gt;PaaS&lt;/a&gt; platform. Make sure your hosting support the programming language you choose, if you got your own virtual server that you can build the runtime you like.&lt;/p&gt;
+
+&lt;p&gt;I use JAVA to build my system, the total system integrated by the &lt;a href=&quot;http://spring.io/&quot;&gt;spring-framework&lt;/a&gt;. I recommend the spring-boot tools to build your system’s prototype which really really fast to integrate the service you need. To receive the &lt;a href=&quot;http://www.investopedia.com/terms/t/tick.asp&quot;&gt;ticks&lt;/a&gt; from the exchange or the market you may need a websocket client service. It is very easy to add the websocket dependency in your system by add the following code in your pom.xml.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-websocket&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 30 Nov 2015 04:30:00 +0800</pubDate>
+        <link>http://rex-zhou.github.io/2015/11/30/2015-11-29-how-to-build-a-trading-system.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/30/2015-11-29-how-to-build-a-trading-system.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Pragmatic Programmer</title>
@@ -176,6 +219,34 @@ not just a website, it more like a app. You can also use it in your mobile devic
         <link>http://rex-zhou.github.io/2015/11/11/welcome-to-reactor.html</link>
         <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/11/welcome-to-reactor.html</guid>
         
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 10 Nov 2015 15:49:39 +0800</pubDate>
+        <link>http://rex-zhou.github.io/jekyll/update/2015/11/10/2015-11-10-welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/jekyll/update/2015/11/10/2015-11-10-welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
         
       </item>
     
