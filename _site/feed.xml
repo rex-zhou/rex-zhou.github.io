@@ -6,9 +6,9 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 29 Nov 2015 16:03:43 +0800</pubDate>
-    <lastBuildDate>Sun, 29 Nov 2015 16:03:43 +0800</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Sun, 29 Nov 2015 22:06:01 +0800</pubDate>
+    <lastBuildDate>Sun, 29 Nov 2015 22:06:01 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>How to build a small FX trading system</title>
@@ -38,17 +38,33 @@
 &lt;h3 id=&quot;pick-up-your-tech-stack-and-write-your-program&quot;&gt;Pick up your tech stack and write your program&lt;/h3&gt;
 &lt;p&gt;First of all, choose an environment to host your program. Because the game hold in my crop are based on the cloud platform &lt;a href=&quot;https://www.cloudfoundry.org/&quot;&gt;CloudFoundry&lt;/a&gt;. So my program was built on this &lt;a href=&quot;https://en.wikipedia.org/wiki/Platform_as_a_service&quot;&gt;PaaS&lt;/a&gt; platform. Make sure your hosting support the programming language you choose, if you got your own virtual server that you can build the runtime you like.&lt;/p&gt;
 
-&lt;p&gt;I use JAVA to build my system, the total system integrated by the &lt;a href=&quot;http://spring.io/&quot;&gt;spring-framework&lt;/a&gt;. I recommend the spring-boot tools to build your system’s prototype which really really fast to integrate the service you need. To receive the &lt;a href=&quot;http://www.investopedia.com/terms/t/tick.asp&quot;&gt;ticks&lt;/a&gt; from the exchange or the market you may need a websocket client service. It is very easy to add the websocket dependency in your system by add the following code in your pom.xml.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Market Watching System&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-websocket&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I use JAVA to build this system, the total system integrated by the &lt;a href=&quot;http://spring.io/&quot;&gt;spring-framework&lt;/a&gt;. I recommend the spring-boot tools to build your system’s prototype which really really fast to integrate the service you need. To receive the &lt;a href=&quot;http://www.investopedia.com/terms/t/tick.asp&quot;&gt;ticks&lt;/a&gt; from the exchange or the market you may need a websocket client service. If your exchange or market dose not provide a websocket feed. Then you need to build a socket server yourself. Using a 3rd party library can reduce the time you talk to native socket APIs. &lt;a href=&quot;http://netty.io/&quot;&gt;Netty&lt;/a&gt; would be helpful if you using JAVA.&lt;/p&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;Algo System&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After you set up your market watching system. Before you start you trading, you need to manage the market data. Data from the market are discrete, create a market data management system is necessary. Keep the market in your cache, if you got a database system, you can also put them in the database. From a period of market data. You can calculate some indicator that will trigger a &lt;a href=&quot;http://www.investopedia.com/terms/t/technicalanalysis.asp&quot;&gt;Singal&lt;/a&gt; to your main program.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Order System&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The order system used to execution an order which triggered by your algorithm engine. This system will send the order to the exchange and also your order book. You order book keeps all the order that generate from your algorithm. If it got the &lt;code class=&quot;highlighter-rouge&quot;&gt;ACK&lt;/code&gt; from the exchange, the order system need to remove the order from the order book automatic. And the order will sync to your position system.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Position System&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The position system plays very import part in your trading system. It shows the current profit and lost in your trading system. It will trigger the take profit order or stop loss order. So the system need to integrate with your all your others system.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 30 Nov 2015 04:30:00 +0800</pubDate>
-        <link>http://rex-zhou.github.io/2015/11/30/2015-11-29-how-to-build-a-trading-system.html</link>
-        <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/30/2015-11-29-how-to-build-a-trading-system.html</guid>
+        <pubDate>Sun, 29 Nov 2015 15:49:39 +0800</pubDate>
+        <link>http://rex-zhou.github.io/2015/11/29/simply-trading-system.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/29/simply-trading-system.html</guid>
         
         
       </item>
@@ -149,10 +165,10 @@ magic to help you do those things. Then you need to know:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;A shell for your OS(&lt;a href=&quot;https://technet.microsoft.com/en-us/library/bb978526.aspx&quot;&gt;Power shell&lt;/a&gt; for Windows. &lt;a href=&quot;https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29&quot;&gt;Bash&lt;/a&gt; for *nix).&lt;/li&gt;
-  &lt;li&gt;System diagnosis command(&lt;code&gt;top&lt;/code&gt;,&lt;code&gt;ifconig&lt;/code&gt;,&lt;code&gt;netstat&lt;/code&gt;,&lt;code&gt;df&lt;/code&gt;…).&lt;/li&gt;
-  &lt;li&gt;File and directory manipulating command(&lt;code&gt;rm&lt;/code&gt;,&lt;code&gt;mkdir&lt;/code&gt;,&lt;code&gt;chmod&lt;/code&gt;…).&lt;/li&gt;
-  &lt;li&gt;File watching command(&lt;code&gt;more&lt;/code&gt;, &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;tail&lt;/code&gt;…).&lt;/li&gt;
-  &lt;li&gt;File process command(&lt;code&gt;sed&lt;/code&gt;, &lt;code&gt;awk&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;System diagnosis command(&lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;ifconig&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;netstat&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;df&lt;/code&gt;…).&lt;/li&gt;
+  &lt;li&gt;File and directory manipulating command(&lt;code class=&quot;highlighter-rouge&quot;&gt;rm&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;chmod&lt;/code&gt;…).&lt;/li&gt;
+  &lt;li&gt;File watching command(&lt;code class=&quot;highlighter-rouge&quot;&gt;more&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;tail&lt;/code&gt;…).&lt;/li&gt;
+  &lt;li&gt;File process command(&lt;code class=&quot;highlighter-rouge&quot;&gt;sed&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;awk&lt;/code&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;All of the above skill just make sure you have basic knowledge for being a programmer. But you still need
@@ -203,6 +219,12 @@ not just a website, it more like a app. You can also use it in your mobile devic
   &lt;li&gt;Great idea&lt;/li&gt;
   &lt;li&gt;Your own tech stack&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/hackathon_1.jpg&quot; alt=&quot;Some pics from the hackfest&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/hackathon_2.jpg&quot; alt=&quot;Some pics from the hackfest&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/hackathon_3.jpg&quot; alt=&quot;Some pics from the hackfest&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 17 Nov 2015 04:30:00 +0800</pubDate>
         <link>http://rex-zhou.github.io/2015/11/17/epam-hackathon.html</link>
@@ -219,34 +241,6 @@ not just a website, it more like a app. You can also use it in your mobile devic
         <link>http://rex-zhou.github.io/2015/11/11/welcome-to-reactor.html</link>
         <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/11/welcome-to-reactor.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 10 Nov 2015 15:49:39 +0800</pubDate>
-        <link>http://rex-zhou.github.io/jekyll/update/2015/11/10/2015-11-10-welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://rex-zhou.github.io/jekyll/update/2015/11/10/2015-11-10-welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     

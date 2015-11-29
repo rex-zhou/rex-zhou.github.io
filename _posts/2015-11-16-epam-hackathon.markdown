@@ -27,3 +27,9 @@ Some tips for hackathon:
   <li>Great idea</li>
   <li>Your own tech stack</li>
 </ol>
+
+![Some pics from the hackfest]({{site.url}}/assets/hackathon_1.jpg)
+
+![Some pics from the hackfest]({{site.url}}/assets/hackathon_2.jpg)
+
+![Some pics from the hackfest]({{site.url}}/assets/hackathon_3.jpg)
