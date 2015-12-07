@@ -6,9 +6,32 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 29 Nov 2015 22:06:01 +0800</pubDate>
-    <lastBuildDate>Sun, 29 Nov 2015 22:06:01 +0800</lastBuildDate>
+    <pubDate>Mon, 07 Dec 2015 23:56:22 +0800</pubDate>
+    <lastBuildDate>Mon, 07 Dec 2015 23:56:22 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>What could happen in 2 days!</title>
+        <description>&lt;p&gt;As we know, &lt;a href=&quot;http://www.apple.com&quot;&gt;Apple&lt;/a&gt; realized their promise to make &lt;a href=&quot;https://swift.org&quot;&gt;Swift&lt;/a&gt; open source last weekend. Everybody can read its source code from &lt;a href=&quot;https://github.com/apple/swift&quot;&gt;GitHub&lt;/a&gt;. Not just on IOS platform such modern programming language could be used everywhere. I do know if you rewrite your IOS app in such language or have you read the source code of a programming language. But you really should know what happened in past 2-3 days.&lt;/p&gt;
+
+&lt;p&gt;After I wrote this post, the Swift project in GitHub already &lt;em&gt;1,375 Watch&lt;/em&gt;, &lt;em&gt;20,122 Star&lt;/em&gt; and &lt;em&gt;2,330 Fork&lt;/em&gt;. There are already 53 Pull requests which mean already 3rd party developer contributed their source code to Swift. Maybe your next app will also contains individual coder’s function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/swift_info.jpg&quot; alt=&quot;Swift Project Info&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The blue giant &lt;a href=&quot;http://www.ibm.com/us-en/&quot;&gt;IBM&lt;/a&gt; delivered the Swift sandbox on their bluemix. If you have no Mac OS you can also try this ‘new’ language on line. Also this sandbox still in beta version, but those great hackers put it online in a very short time. Be one of those hacker click &lt;a href=&quot;https://developer.ibm.com/swift/&quot;&gt;here&lt;/a&gt; to get involved. Maybe someday, you will bring next generation on the cloud in a flash.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://swiftlang.ng.bluemix.net/#/repl&quot;&gt;IBM Swift Sandbox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to run Swift on Linux platform, the complier for linux already online. Don’t hasted download those snapshot from &lt;a href=&quot;https://swift.org/download/#latest-development-snapshots&quot;&gt;this page&lt;/a&gt;. Then you can write your first hello world in a not-apple device. That’s really cool.&lt;/p&gt;
+
+&lt;p&gt;I dear to say, more and more Swift program will comes out in the following week. That’s the power of open source. Everybody can get it, change it and bring their idea into real life. What most important thing is that every idea comes out in a very short time. Do like what a hacker doing. No more talk, just open your editor, let’s code;)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 07 Dec 2015 20:30:00 +0800</pubDate>
+        <link>http://rex-zhou.github.io/2015/12/07/what-could-happen-in-2-days.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/2015/12/07/what-could-happen-in-2-days.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>How to build a small FX trading system</title>
