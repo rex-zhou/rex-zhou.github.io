@@ -8,7 +8,9 @@ As we know, [Apple](http://www.apple.com) realized their promise to make [Swift]
 
 After I wrote this post, the Swift project in GitHub already *1,375 Watch*, *20,122 Star* and *2,330 Fork*. There are already 53 Pull requests which mean already 3rd party developer contributed their source code to Swift. Maybe your next app will also contains individual coder's function.
 
-![Swift Project Info]({{site.url}}/assets/swift_info.jpg)
+![Swift Project Info]({{site.url}}/assets/swift_info.png)
+
+There is also already a swift package manager tool for using. Provided by Apple, you can also download from GitHub [Swift Package Manager](https://github.com/apple/swift-package-manager)
 
 The blue giant [IBM](http://www.ibm.com/us-en/) delivered the Swift sandbox on their bluemix. If you have no Mac OS you can also try this 'new' language on line. Also this sandbox still in beta version, but those great hackers put it online in a very short time. Be one of those hacker click [here](https://developer.ibm.com/swift/) to get involved. Maybe someday, you will bring next generation on the cloud in a flash.
 
