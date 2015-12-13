@@ -6,9 +6,193 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 07 Dec 2015 23:56:22 +0800</pubDate>
-    <lastBuildDate>Mon, 07 Dec 2015 23:56:22 +0800</lastBuildDate>
+    <pubDate>Sun, 13 Dec 2015 23:51:05 +0800</pubDate>
+    <lastBuildDate>Sun, 13 Dec 2015 23:51:05 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Groovy, please try!</title>
+        <description>&lt;p&gt;For a java programmer sometimes need to write some POC program. The program changed often, sometimes you feel tired to move a lot of interfaces, factories, builders and services. Refactor takes a lot of time and also may create more structure class in your program. Under such situation you may want some dynamic feature for Java, but it is impossible. &lt;a href=&quot;http://www.groovy-lang.org/&quot;&gt;Groovy&lt;/a&gt; was birth for this. I really recommend you to try such programming language.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-install&quot;&gt;How to install&lt;/h1&gt;
+
+&lt;p&gt;For window, you can visit &lt;a href=&quot;http://www.groovy-lang.org/download.html&quot;&gt;groovy download page&lt;/a&gt; to download. For Mac OSX, Linux  user better to use &lt;a href=&quot;http://sdkman.io/&quot;&gt;SDKMAN&lt;/a&gt; to download and configure any Groovy version of your choice. You may also need to install &lt;a href=&quot;https://grails.org/index.html&quot;&gt;Grails&lt;/a&gt; for web development, SDKMAN can also help you to handle it.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$curl&lt;/span&gt; -s get.sdkman.io | bash
+&lt;span class=&quot;c&quot;&gt;#You need reopen a session&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$sdk&lt;/span&gt; install groovy
+&lt;span class=&quot;c&quot;&gt;#Check if you successful installed it&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$groovy&lt;/span&gt; -version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;your-first-program&quot;&gt;Your first program&lt;/h1&gt;
+
+&lt;p&gt;Please open your favorite editor to input below code and save as &lt;code class=&quot;highlighter-rouge&quot;&gt;MyGroovyScript.groovy&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Hello Groovy!&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then in your command type&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;groovy MyGroovyScript.groovy&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You will see your screen prints &lt;code class=&quot;highlighter-rouge&quot;&gt;Hello Groovy!&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;some-string-magic&quot;&gt;Some String magic&lt;/h1&gt;
+
+&lt;p&gt;In groovy single quoted strings are plain &lt;code class=&quot;highlighter-rouge&quot;&gt;java.lang.String&lt;/code&gt; object. You can simple use &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; to compare two string’s value are equal. No need to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;String.equals()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;a string&#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;a string&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Please try to modified the &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;, you can see a more powerful assert in Groovy which I love the most. As you see there’s no semicolon at the end of the line. This becomes not necessary in Groovy.&lt;/p&gt;
+
+&lt;p&gt;Any Groovy expression can be interpolated in all string literals, apart from single and triple single quoted strings. This is a little bit like &lt;a href=&quot;https://www.perl.org/&quot;&gt;Perl&lt;/a&gt; and very useful when you process some text;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Rex&#39;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greeting&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello ${name}&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Hello Rex&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;collections&quot;&gt;Collections&lt;/h1&gt;
+&lt;p&gt;Groovy also uses some Java collections. Groovy lists are plain JDK &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.List&lt;/code&gt; the default implementation are &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.ArrayList&lt;/code&gt;. It can also changed by using &lt;code class=&quot;highlighter-rouge&quot;&gt;as&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linkedList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linkedList&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linkedList&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LinkedList&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can fast access a element in a list by its index. If use a negative index, it will count from the backend. Btw also can use a rang to access a list which really readable.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Groovy creates maps are instances of &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.LinkedHashMap&lt;/code&gt; which a little like Spring map injection.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;name:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Rex&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;age:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;name&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Rex&#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Insert a element&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gender&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;male&#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gender&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;male&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;closures&quot;&gt;Closures&lt;/h1&gt;
+&lt;p&gt;A closure in Groovy is an anonymous, block of code that can pass in arguments and return a value. A little complex? Haha, let’s learn it from coding.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Syntax&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Try some simple&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Convert to upper case&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;convertToUpperCase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;convertToUpperCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;rex&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;REX&#39;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// With 2 params&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Varargs&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concatString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;-&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;concatString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;I&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Love&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Groovy&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;I-Love-Groovy&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;With closure we can try functional programming in Groovy.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//This is an example for calculate the Fibonacci&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Need to define first or will throw MissingMethodException&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;n:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6765&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// To make it execute fast can cache the former result by memoize()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;n:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;memoize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;the-nuclear-boom-domain-specific-language&quot;&gt;The nuclear boom: Domain-Specific Language&lt;/h1&gt;
+&lt;p&gt;The most powerful feature in Groovy should be the &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-specific_language&quot;&gt;DSL(Domain-Specific Language)&lt;/a&gt; support. Some modern building tools such as &lt;a href=&quot;http://gradle.org/&quot;&gt;Gradle&lt;/a&gt; are base on this. With this you can try to build your own language parser. The blow example comes from the official document from &lt;a href=&quot;http://www.groovy-lang.org/dsls.html&quot;&gt;groovy-lang&lt;/a&gt;, you can find more details from there.&lt;/p&gt;
+
+&lt;p&gt;Now we create a DSL with the following structure&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;n&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;dsl-guru@mycompany.com&#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;john.doe@waitaminute.com&#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;The pope has resigned!&#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Really, the pope has resigned!&#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then implementing such a builder is usually done the following way:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Closure&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EmailSpec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rehydrate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resolveStrategy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Closure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;DELEGATE_ONLY&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We also need to build the spec for a DSL and pass to the builder to execute&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmailSpec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;From: $from&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;To: $to&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Subject: $subject&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Closure&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bodySpec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BodySpec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rehydrate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bodySpec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resolveStrategy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Closure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;DELEGATE_ONLY&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then the type checker will know if an &lt;code class=&quot;highlighter-rouge&quot;&gt;email&lt;/code&gt; method accepting a Closure.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@groovy.transform.TypeChecked&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;dsl-guru@mycompany.com&#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;john.doe@waitaminute.com&#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;The pope has resigned!&#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Really, the pope has resigned!&#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It is magic right?&lt;/p&gt;
+
+&lt;h1 id=&quot;some-other-useful-tools&quot;&gt;Some other useful tools&lt;/h1&gt;
+&lt;p&gt;There are some useful tools build on Groovy. Let me take a short tour.&lt;/p&gt;
+
+&lt;h4 id=&quot;gradle&quot;&gt;Gradle&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://gradle.org&quot;&gt;Gradle&lt;/a&gt; is a modern building tools. Now is the official recommend building tool for Android Developer. Gradle build on Groovy DSL, which is a better solution for construct building steps. To compare with Maven, with a Java plugin in Gradle, the build script can be like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-gradle&quot; data-lang=&quot;gradle&quot;&gt;apply plugin: &#39;java&#39;
+repositories {
+  mavenCentral()
+}
+dependencies {
+  compile group: &#39;commons-collections&#39;, name: &#39;commons-collections&#39;, version: &#39;3.2&#39;
+  testCompile group: &#39;junit&#39;, name: &#39;junit&#39;, version: &#39;4.+&#39;  
+}
+sourceCompatibility = 1.5
+version = &#39;1.0&#39;
+jar {
+  manifest {
+    attributes &#39;Implementation-Title&#39;: &#39;Gradle Project&#39;,
+               &#39;implementation-Version&#39;: version
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;grails&quot;&gt;Grails&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://grails.org/index.html&quot;&gt;Grails&lt;/a&gt; is a powerful web framework which including integrated ORM, Domain-specific  Language, runtime and compile-time meta-programming and Asynchronous programming. If you want to develop a web application don’t forget to take a try with this.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Dec 2015 20:30:00 +0800</pubDate>
+        <link>http://rex-zhou.github.io/2015/12/12/simple-groovy-guide.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/2015/12/12/simple-groovy-guide.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>What could happen in 2 days!</title>
@@ -16,7 +200,9 @@
 
 &lt;p&gt;After I wrote this post, the Swift project in GitHub already &lt;em&gt;1,375 Watch&lt;/em&gt;, &lt;em&gt;20,122 Star&lt;/em&gt; and &lt;em&gt;2,330 Fork&lt;/em&gt;. There are already 53 Pull requests which mean already 3rd party developer contributed their source code to Swift. Maybe your next app will also contains individual coder’s function.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/swift_info.jpg&quot; alt=&quot;Swift Project Info&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/swift_info.png&quot; alt=&quot;Swift Project Info&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is also already a swift package manager tool for using. Provided by Apple, you can also download from GitHub &lt;a href=&quot;https://github.com/apple/swift-package-manager&quot;&gt;Swift Package Manager&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The blue giant &lt;a href=&quot;http://www.ibm.com/us-en/&quot;&gt;IBM&lt;/a&gt; delivered the Swift sandbox on their bluemix. If you have no Mac OS you can also try this ‘new’ language on line. Also this sandbox still in beta version, but those great hackers put it online in a very short time. Be one of those hacker click &lt;a href=&quot;https://developer.ibm.com/swift/&quot;&gt;here&lt;/a&gt; to get involved. Maybe someday, you will bring next generation on the cloud in a flash.&lt;/p&gt;
 
