@@ -172,7 +172,7 @@ There are some useful tools build on Groovy. Let me take a short tour.
 
 #### Gradle
 [Gradle](https://gradle.org) is a modern building tools. Now is the official recommend building tool for Android Developer. Gradle build on Groovy DSL, which is a better solution for construct building steps. To compare with Maven, with a Java plugin in Gradle, the build script can be like this:
-{% highlight gradle%}
+{% highlight groovy %}
 apply plugin: 'java'
 repositories {
   mavenCentral()
