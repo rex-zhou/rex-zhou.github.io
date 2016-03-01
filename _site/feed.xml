@@ -6,8 +6,8 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 01 Mar 2016 23:40:13 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2016 23:40:13 +0800</lastBuildDate>
+    <pubDate>Tue, 01 Mar 2016 23:41:51 +0800</pubDate>
+    <lastBuildDate>Tue, 01 Mar 2016 23:41:51 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -36,8 +36,7 @@
 
 &lt;p&gt;We have looked at what a block chain might or might not be, and perhaps seen some hints of what it might enable. The technology that underpins bitcoin can be used to build many things.&lt;/p&gt;
 
-&lt;h4 id=&quot;useful-reference&quot;&gt;Useful reference&lt;/h4&gt;
-
+&lt;h1 id=&quot;useful-reference&quot;&gt;Useful reference&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://bitcoin.org/bitcoin.pdf&quot;&gt;Bitcoin white paper&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.bitcoin.it/wiki/Main_Page&quot;&gt;Bitcoin wiki&lt;/a&gt;&lt;/p&gt;
