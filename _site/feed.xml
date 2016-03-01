@@ -6,9 +6,51 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 17 Feb 2016 00:07:09 +0800</pubDate>
-    <lastBuildDate>Wed, 17 Feb 2016 00:07:09 +0800</lastBuildDate>
+    <pubDate>Tue, 01 Mar 2016 23:38:21 +0800</pubDate>
+    <lastBuildDate>Tue, 01 Mar 2016 23:38:21 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>What is blockchain</title>
+        <description>&lt;p&gt;We often heard some news like “xxx is building a xxx powered by the block chain.” or “xxx bank is working on block chain”. Suddenly the word ‘block chain’ becomes a very popular like “Justin Bieber”. To make you have a basic image for such technology this article just give you some brief about it.&lt;/p&gt;
+
+&lt;p&gt;A block chain is a technology comes from the Bitcoin world. The Bitcoin is a decentralized digital asset and payment system invented by &lt;a href=&quot;https://en.wikipedia.org/wiki/Satoshi_Nakamoto&quot;&gt;Satoshi Nakamoto&lt;/a&gt; published in 2008. All the bitcoin’s transactions are verified by network nodes and recorded in a public distributed ledger which is called the &lt;code class=&quot;highlighter-rouge&quot;&gt;block chain&lt;/code&gt;. You can think the block chain is a transaction database which recorded all the transaction executed in the currency.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/Bitcoin_Block_Data.png&quot; alt=&quot;Some pics for the blockchain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the pic above you can refer that every block contains a hash of the previous block. This has the effect of creating a chain of blocks from the &lt;a href=&quot;https://en.bitcoin.it/wiki/Genesis_block&quot;&gt;genesis block&lt;/a&gt; to the current block. Each block is guaranteed to come after the previous block chronologically because the previous block’s hash would otherwise not be known. Each block is also computationally impractical to modify once it has been in the chain for a while because every block after it would also have to be regenerated.&lt;/p&gt;
+
+&lt;p&gt;Here’re some key factors that make the block chain technology attractive and possible widely use.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Decentralised nature.&lt;/li&gt;
+  &lt;li&gt;Transparency.&lt;/li&gt;
+  &lt;li&gt;Immutablility.&lt;/li&gt;
+  &lt;li&gt;Cost.&lt;/li&gt;
+  &lt;li&gt;Speed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From those characteristics above this technology can be very useful for financial services. There’s some alternative chain using the block chain algorithm to achieve distributed consensus on a particular topic. Those chains have been suggested as ways to implement DNS, P2P currency exchanges, SSL certificate authorities, timestamping, file storage and voting systems.&lt;/p&gt;
+
+&lt;p&gt;The elegance of the block chain is that it obviates the need for a central authority to verify trust and the transfer of value. The mechanics of the it are novel and highly disruptive. Once a transaction occured a public record of all transactions is automatically created. Every node can verify each transaction by the algorithm to confirm the transaction and create a historical ledger of all activity.&lt;/p&gt;
+
+&lt;p&gt;We have looked at what a block chain might or might not be, and perhaps seen some hints of what it might enable. The technology that underpins bitcoin can be used to build many things.&lt;/p&gt;
+
+&lt;h4 id=&quot;useful-reference&quot;&gt;Useful reference&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://bitcoin.org/bitcoin.pdf&quot;&gt;Bitcoin white paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.bitcoin.it/wiki/Main_Page&quot;&gt;Bitcoin wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bitcoin.org/en/&quot;&gt;Bitcoin org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.coinbase.com/&quot;&gt;Bitcoin trading&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 Mar 2016 18:30:00 +0800</pubDate>
+        <link>http://rex-zhou.github.io/2016/03/01/what-is-blockchain.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/2016/03/01/what-is-blockchain.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>To design a better API</title>
@@ -646,17 +688,6 @@ not just a website, it more like a app. You can also use it in your mobile devic
         <pubDate>Tue, 17 Nov 2015 04:30:00 +0800</pubDate>
         <link>http://rex-zhou.github.io/2015/11/17/epam-hackathon.html</link>
         <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/17/epam-hackathon.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Reactor!</title>
-        <description>&lt;p&gt;Hello guys, thanks for your time to visit this space. This is the first post, so still empty here. I’ll keep on updating in the future ;)&lt;/p&gt;
-</description>
-        <pubDate>Wed, 11 Nov 2015 04:30:00 +0800</pubDate>
-        <link>http://rex-zhou.github.io/2015/11/11/welcome-to-reactor.html</link>
-        <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/11/welcome-to-reactor.html</guid>
         
         
       </item>
