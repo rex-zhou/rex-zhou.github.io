@@ -27,6 +27,7 @@ The elegance of the block chain is that it obviates the need for a central autho
 We have looked at what a block chain might or might not be, and perhaps seen some hints of what it might enable. The technology that underpins bitcoin can be used to build many things.
 
 ####Useful reference
+
 [Bitcoin white paper](https://bitcoin.org/bitcoin.pdf)
 
 [Bitcoin wiki](https://en.bitcoin.it/wiki/Main_Page)
