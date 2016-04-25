@@ -6,9 +6,193 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 01 Mar 2016 23:41:51 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2016 23:41:51 +0800</lastBuildDate>
+    <pubDate>Mon, 25 Apr 2016 23:21:28 +0800</pubDate>
+    <lastBuildDate>Mon, 25 Apr 2016 23:21:28 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Linux Shell Programming</title>
+        <description>&lt;p&gt;Also there are some programming language such as Python, Perl and Ruby could help to take the job of Linux system programming but you still need to know something about Bash.&lt;/p&gt;
+
+&lt;p&gt;OK Let’s kick start!&lt;/p&gt;
+
+&lt;h1 id=&quot;print-the-environment-variable&quot;&gt;Print the environment variable&lt;/h1&gt;
+&lt;p&gt;You can use &lt;code class=&quot;highlighter-rouge&quot;&gt;echo&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;printf&lt;/code&gt; to display some environment variable on the screen.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#both are same will print your java home path&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%-10s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#printf is same with C programming language&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;calculation&quot;&gt;Calculation&lt;/h1&gt;
+&lt;p&gt;In Bash shell, &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;(())&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; can be used for basic calculation.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 &lt;span class=&quot;c&quot;&gt;#there should be no space around the `=`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
+&lt;span class=&quot;nb&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;a+b &lt;span class=&quot;c&quot;&gt;#no &#39;$&#39; while using let&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;stdin&quot;&gt;Stdin&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt; are for file input.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;This is test&quot;&lt;/span&gt; &amp;gt; temp.txt  &lt;span class=&quot;c&quot;&gt;#This will replace the content of temp.txt&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;This is test2&quot;&lt;/span&gt; &amp;gt;&amp;gt; temp.txt &lt;span class=&quot;c&quot;&gt;#This will append&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;date-format&quot;&gt;Date format&lt;/h1&gt;
+&lt;p&gt;In Unix-like system, date is stored as a number which record the count of seconds from Jan-1 1970 UTC&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;date &lt;span class=&quot;c&quot;&gt;# Sun Apr 24 11:49:52 CST 2016&lt;/span&gt;
+date +%s &lt;span class=&quot;c&quot;&gt;# 1461469825 %s for the Unix seconds&lt;/span&gt;
+date &lt;span class=&quot;s2&quot;&gt;&quot;+%d %B %Y&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 24 April 2016&lt;/span&gt;
+date +%D &lt;span class=&quot;c&quot;&gt;# 04/24/16 mm/dd/yy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;function-and-param&quot;&gt;Function and param&lt;/h1&gt;
+&lt;p&gt;Like other script language, Bash also support function.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#define a function&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  statements;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#or&lt;/span&gt;
+name&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  statements;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# to execute a function&lt;/span&gt;
+name ;
+name arg1 arg2 ;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;pipes&quot;&gt;Pipes&lt;/h1&gt;
+&lt;p&gt;Pipes let you use the output of a program as the input of another one.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;cmd1 | cmd2 | cmd3
+&lt;span class=&quot;c&quot;&gt;#The output of cmd1 will pass to cmd2 and the output of cmd2 will send to cmd3 as input&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ls | cat -n &amp;gt; out.txt
+&lt;span class=&quot;c&quot;&gt;#The current directory will pass to cat -n, and cat -n will be the input stdin then redirect to out.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;cat-command&quot;&gt;Cat command&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; command is used for contact the display content.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#remove the space&lt;/span&gt;
+cat -s file
+&lt;span class=&quot;c&quot;&gt;#add line number&lt;/span&gt;
+cat -n file&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; won’t modified your file content, just create a new one in stdin.&lt;/p&gt;
+
+&lt;h1 id=&quot;translate&quot;&gt;Translate&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tr&lt;/code&gt; used for replace and delete character from stdin.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;HELLO WORLD&quot;&lt;/span&gt; | tr &lt;span class=&quot;s1&quot;&gt;&#39;A-Z&#39;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;a-z&#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;12345 | tr &lt;span class=&quot;s1&quot;&gt;&#39;0-9&#39;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;9876543210&#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 87654 replace&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello 123 world 456&quot;&lt;/span&gt; | tr -d &lt;span class=&quot;s1&quot;&gt;&#39;0-9&#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# delete digit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;checksum&quot;&gt;Checksum&lt;/h1&gt;
+&lt;p&gt;MD5&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;md5 filename &lt;span class=&quot;c&quot;&gt;# MD5 (filename.txt) = 9acef9a7ca1069a763da26c7c4879f7c&lt;/span&gt;
+md5 -s &lt;span class=&quot;s2&quot;&gt;&quot;Hello World&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# MD5 (&quot;Hello World&quot;) = b10a8db164e0754105b7a99be72e3fe5&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;file-rename-and-moving&quot;&gt;File rename and moving&lt;/h1&gt;
+&lt;p&gt;Here’s an example for rename all the mp3 file in current directory.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1;
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;file &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.mp3
+&lt;span class=&quot;k&quot;&gt;do
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sound-&lt;span class=&quot;nv&quot;&gt;$count&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;##*.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+mv &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$new&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 2&amp;gt; /dev/null
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt; -eq 0];
+&lt;span class=&quot;k&quot;&gt;then
+
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Renaming &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; to &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$new&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;let &lt;/span&gt;count++
+
+&lt;span class=&quot;k&quot;&gt;fi
+done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The output will be like beflow&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Renaming A.mp3 to sound-1.mp3
+Renaming B.mp3 to sound-2.mp3
+Renaming C.mp3 to sound-3.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;word-count&quot;&gt;Word Count&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-hash&quot; data-lang=&quot;hash&quot;&gt;wc -l file # the line number
+cat file | wc -l # use cat as stdin
+wc -w file # the word number
+wc -c file # the char number&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;print-the-directory-tree&quot;&gt;Print the directory tree&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-hash&quot; data-lang=&quot;hash&quot;&gt;tree dirname
+tree -h # print the file and size&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;download-the-website&quot;&gt;Download the website&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wget&lt;/code&gt; is used for file download. If you are using the Mac OS, you need to download the command first.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget URL
+wget URL1 URL2 URL3
+wget -t 5 URL &lt;span class=&quot;c&quot;&gt;# retry 5 times&lt;/span&gt;
+wget -c URL &lt;span class=&quot;c&quot;&gt;# continue getting a file&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; is same with the &lt;code class=&quot;highlighter-rouge&quot;&gt;wget&lt;/code&gt; command, but it will create the stdin stream as input.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl URL&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;a-file-crawler&quot;&gt;A file crawler&lt;/h1&gt;
+&lt;p&gt;Get pic from the website&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$# &lt;/span&gt;-ne 3];
+&lt;span class=&quot;k&quot;&gt;then
+  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Usage: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; URL -d DIRECTORY&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; -1
+&lt;span class=&quot;k&quot;&gt;if
+
+for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1..4&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+  case&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  -d&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;shift&lt;/span&gt;; &lt;span class=&quot;nv&quot;&gt;directory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;; &lt;span class=&quot;nb&quot;&gt;shift&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;; &lt;span class=&quot;nb&quot;&gt;shift&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;esac&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done
+
+&lt;/span&gt;mkdir -p &lt;span class=&quot;nv&quot;&gt;$directory&lt;/span&gt;;
+&lt;span class=&quot;nv&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$url&lt;/span&gt; | egrep -o &lt;span class=&quot;s2&quot;&gt;&quot;https?://[a-z.]+&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+
+curl -s &lt;span class=&quot;nv&quot;&gt;$url&lt;/span&gt; | egrep -o &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;img src=[^&amp;gt;]*&amp;gt;&quot;&lt;/span&gt; |
+sed &lt;span class=&quot;s1&quot;&gt;&#39;s/&amp;lt;img src=\&quot;\([^&quot;]*\).*/\`/g&#39;&lt;/span&gt; &amp;gt; /tmp/&lt;span class=&quot;nv&quot;&gt;$$&lt;/span&gt;.list
+sed -i &lt;span class=&quot;s2&quot;&gt;&quot;s|^/|&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$baseurl&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/|&quot;&lt;/span&gt; /tmp/&lt;span class=&quot;nv&quot;&gt;$$&lt;/span&gt;.list
+
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$directory&lt;/span&gt;;
+
+&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;filename;
+&lt;span class=&quot;k&quot;&gt;do
+  &lt;/span&gt;curl -s -O &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; --silent
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; /tmp/&lt;span class=&quot;nv&quot;&gt;$$&lt;/span&gt;.list
+
+&lt;span class=&quot;c&quot;&gt;##usage: ./img_downloader.sh url -d dir&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;command-execution-time&quot;&gt;Command execution time&lt;/h1&gt;
+&lt;p&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;time&lt;/code&gt; command before any command&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;ls
+&lt;span class=&quot;c&quot;&gt;#cmd_outp.sh	file_sum.md5	variables.sh&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#real	0m0.010s  wall clock time&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#user	0m0.002s  user mode CPU time&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#sys	0m0.005s  kernel mode CPU time&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Fri, 22 Apr 2016 18:30:00 +0800</pubDate>
+        <link>http://rex-zhou.github.io/2016/04/22/Linux-Shell-Programming.html</link>
+        <guid isPermaLink="true">http://rex-zhou.github.io/2016/04/22/Linux-Shell-Programming.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>What is blockchain</title>
@@ -649,45 +833,6 @@ not just a website, it more like a app. You can also use it in your mobile devic
         <pubDate>Mon, 23 Nov 2015 02:49:39 +0800</pubDate>
         <link>http://rex-zhou.github.io/2015/11/23/Pragmatic-Programmer.html</link>
         <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/23/Pragmatic-Programmer.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>EPAM Hackfest!</title>
-        <description>&lt;p&gt;It was very great experience to join the &lt;a href=&quot;www.epam.com&quot;&gt;EPAM&lt;/a&gt; hackfest last week. &lt;a href=&quot;https://en.wikipedia.org/wiki/Hackathon&quot;&gt;Hackfest&lt;/a&gt; (also called hackathon) is an event that need to coding for 24 hours to make a product. The most challenge thing is to build a software or a demo in limited time.&lt;/p&gt;
-
-&lt;p&gt;This event was hold in ShenZhen nice place for those who want to build their career. It was my first time to join such activity so I went there alone. But if you got team and it will bring you very different experience. The match ground looks like an internet company, it provided the free wifi, food, drink, bathroom and the beer!&lt;/p&gt;
-
-&lt;p&gt;The hackfest began with a great lecture hold by &lt;a href=&quot;www.epam.com&quot;&gt;EPAM&lt;/a&gt; they showed you what hackathon looks like and how to get succeed in the match（actually it works).&lt;/p&gt;
-
-&lt;p&gt;We made a team there one big guy from Bay Area was data scientist of &lt;a href=&quot;www.facebook.com&quot;&gt;Facebook&lt;/a&gt; another guy is a self employee and good at javascript programming. The fourth buddy left us due to we still not got the idea for what we are going to do after the match started 2 hours ago. So the most important thing for the event is an idea, if you got a great idea you already won half of the match. After the brain storm with my teammates we determine to build a tool help us to hack the hackathon. If it not win the match we still could use it for next time.&lt;/p&gt;
-
-&lt;p&gt;The coding activity lasted for 20 hours about 1 days. Around the middle night of the 1st day, they run out of free coke. Many people went to sleep, just few buddy still debug there code. And we already build a prototype for our program, but the data still a big problem. We tried many kind of ways to download the history hackathon data. But still so hard to analysis. Finally our big guy found a useful tool called &lt;a href=&quot;https://import.io&quot;&gt;Import.io&lt;/a&gt; to fetch the data. The data already sorted and classified by the tool. And we could analysis the data and draw the chart.&lt;/p&gt;
-
-&lt;p&gt;All the participants need to push their code to the &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt; for final judgement. Before the presentation we keep on clicking the ‘refesh’ button on our web broswer because of the unstable wifi. But it worse less. Nothing could make sure everything goes well unless you have a backup plan. During the presentation we have to switch to the another pc because my laptop suddenly could not connect to our server.&lt;/p&gt;
-
-&lt;p&gt;The result if less important right?&lt;/p&gt;
-
-&lt;p&gt;The most important thing in the hackfest is coding for fun and what you learned from others. Ok, let’s cheer for the winner.&lt;/p&gt;
-
-&lt;p&gt;Some tips for hackathon:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Coding for fun.&lt;/li&gt;
-  &lt;li&gt;Challenge yourself.&lt;/li&gt;
-  &lt;li&gt;Great idea&lt;/li&gt;
-  &lt;li&gt;Your own tech stack&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/hackathon_1.jpg&quot; alt=&quot;Some pics from the hackfest&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/hackathon_2.jpg&quot; alt=&quot;Some pics from the hackfest&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://rex-zhou.github.io/assets/hackathon_3.jpg&quot; alt=&quot;Some pics from the hackfest&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 17 Nov 2015 04:30:00 +0800</pubDate>
-        <link>http://rex-zhou.github.io/2015/11/17/epam-hackathon.html</link>
-        <guid isPermaLink="true">http://rex-zhou.github.io/2015/11/17/epam-hackathon.html</guid>
         
         
       </item>
