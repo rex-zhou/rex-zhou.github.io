@@ -6,7 +6,7 @@ date: 2015-12-12 12:30:00
 
 For a java programmer sometimes need to write some POC program. The program changed often, sometimes you feel tired to move a lot of interfaces, factories, builders and services. Refactor takes a lot of time and also may create more structure class in your program. Under such situation you may want some dynamic feature for Java, but it is impossible. [Groovy](http://www.groovy-lang.org/) was birth for this. I really recommend you to try such programming language.
 
-#How to install
+# How to install
 
 For window, you can visit [groovy download page](http://www.groovy-lang.org/download.html) to download. For Mac OSX, Linux  user better to use [SDKMAN](http://sdkman.io/) to download and configure any Groovy version of your choice. You may also need to install [Grails](https://grails.org/index.html) for web development, SDKMAN can also help you to handle it.
 
@@ -18,7 +18,7 @@ $sdk install groovy
 $groovy -version
 {% endhighlight %}
 
-#Your first program
+# Your first program
 
 Please open your favorite editor to input below code and save as `MyGroovyScript.groovy`
 
@@ -34,7 +34,7 @@ groovy MyGroovyScript.groovy
 
 You will see your screen prints `Hello Groovy!`
 
-#Some String magic
+# Some String magic
 
 In groovy single quoted strings are plain `java.lang.String` object. You can simple use `==` to compare two string's value are equal. No need to use the `String.equals()` method.
 {% highlight groovy %}
@@ -50,7 +50,7 @@ def greeting = "Hello ${name}"
 assert greeting.toString() == 'Hello Rex'
 {% endhighlight %}
 
-#Collections
+# Collections
 Groovy also uses some Java collections. Groovy lists are plain JDK `java.util.List` the default implementation are `java.util.ArrayList`. It can also changed by using `as`.
 {% highlight groovy %}
 def numbers = [1, 2, 3]
@@ -76,7 +76,7 @@ info['gender'] = 'male'
 assert info.gender == 'male'
 {% endhighlight %}
 
-#Closures
+# Closures
 A closure in Groovy is an anonymous, block of code that can pass in arguments and return a value. A little complex? Haha, let's learn it from coding.
 {% highlight groovy %}
 // Syntax
@@ -113,7 +113,7 @@ fib = {
 }.memoize()
 {% endhighlight %}
 
-#The nuclear boom: Domain-Specific Language
+# The nuclear boom: Domain-Specific Language
 The most powerful feature in Groovy should be the [DSL(Domain-Specific Language)](https://en.wikipedia.org/wiki/Domain-specific_language) support. Some modern building tools such as [Gradle](http://gradle.org/) are base on this. With this you can try to build your own language parser. The blow example comes from the official document from [groovy-lang](http://www.groovy-lang.org/dsls.html), you can find more details from there.
 
 Now we create a DSL with the following structure
@@ -167,7 +167,7 @@ void sendEmail() {
 {% endhighlight%}
 It is magic right?
 
-#Some other useful tools
+# Some other useful tools
 There are some useful tools build on Groovy. Let me take a short tour.
 
 #### Gradle

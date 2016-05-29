@@ -44,7 +44,7 @@ $ npm install chai
 
 Recommend adding them to `package.json` file using a `*` as the version tag. This will ensure that you always have the most recent version.
 
-#Tesing javascript with Mocha
+# Tesing javascript with Mocha
 All the Mocha test case file should located in the `test` folder. Then we could enhance the above test case with Mocha.
 {% highlight javascript %}
 "use strict";
