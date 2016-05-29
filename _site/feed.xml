@@ -6,8 +6,8 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 29 May 2016 13:59:48 +0800</pubDate>
-    <lastBuildDate>Sun, 29 May 2016 13:59:48 +0800</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 14:03:36 +0800</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 14:03:36 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -18,12 +18,12 @@
 
 &lt;p&gt;OK Let’s kick start!&lt;/p&gt;
 
-&lt;h2 id=&quot;check-the-test-coverage-and-the-test-case&quot;&gt;Check the test coverage and the test case&lt;/h2&gt;
+&lt;h1 id=&quot;check-the-test-coverage-and-the-test-case&quot;&gt;Check the test coverage and the test case&lt;/h1&gt;
 &lt;p&gt;Sometimes you just refactor a big block of your code and click the test button. All the test case are passed. A voice may be from your heart “My refactor works, what a magic!”. But is it really ok? There may be some hidden issues come from your refactor. How to avoid this?&lt;/p&gt;
 
 &lt;p&gt;Before your refactor you need to check the test coverage for the block that you want to replace or extract. Make sure you already write the equivalent test case for your new code. But is the test coverage means everything? I am afraid not. You still need to check your test case. Sometimes the legacy test case not really fit the requirement, and they just could get passed.&lt;/p&gt;
 
-&lt;h2 id=&quot;limit-your-refactor-scope&quot;&gt;Limit your refactor scope&lt;/h2&gt;
+&lt;h1 id=&quot;limit-your-refactor-scope&quot;&gt;Limit your refactor scope&lt;/h1&gt;
 &lt;p&gt;To make sure the effect that brought by your new code is small. You should limit your refactor scope. Do not just create a abstract class that replace all the same code you saw in those classes. Sometimes you could not know the scope that a abstract may affect. The current class maybe ok, but it may bring some new bugs in the follow process. Always check where those code should be placed. Once to create some value object make sure they should be create in some factory class rather in abstract class.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//Do not create a abstract for a value object&lt;/span&gt;
@@ -49,7 +49,7 @@
   &lt;span class=&quot;n&quot;&gt;AccountInfo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountInfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ApplePayAccountInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h2 id=&quot;the-null-checking&quot;&gt;The null-checking&lt;/h2&gt;
+&lt;h1 id=&quot;the-null-checking&quot;&gt;The null-checking&lt;/h1&gt;
 &lt;p&gt;The billion dollar mistake. We often saw some statements like &lt;code class=&quot;highlighter-rouge&quot;&gt;something != null&lt;/code&gt; in our codes. Someone was thinking this is a good practice for programming, but it depends. For example the below code snip.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;AccountInfo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountInfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getAccountInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
@@ -63,7 +63,7 @@
 
 &lt;p&gt;Someone like to separate the code to safe part(with null checking) and non-safe part(without null checking), it is also a great practice and easy for testing and simulation. But the code should be well encapsulated to prevent mistake. I really like the design in &lt;a href=&quot;https://kotlinlang.org/&quot;&gt;Kotlin&lt;/a&gt; that if you assign a null to the subclass of Any() and the code could not compile.&lt;/p&gt;
 
-&lt;h2 id=&quot;data-object&quot;&gt;Data object&lt;/h2&gt;
+&lt;h1 id=&quot;data-object&quot;&gt;Data object&lt;/h1&gt;
 &lt;p&gt;If you working on the system which based on a data flow the data object could be seen everywhere. Lots of business logic come with those data objects. Someone like to use an interface to hidden the data object behind but it always bring some unnecessary fields and conditions. To work with legacy code, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Adapter_pattern&quot;&gt;adaptor pattern&lt;/a&gt; sometimes is useful for data conversion. Better to create the new object with a &lt;a href=&quot;https://en.wikipedia.org/wiki/Factory_method_pattern&quot;&gt;factory method pattern&lt;/a&gt; or &lt;a href=&quot;http://stackoverflow.com/questions/929021/what-are-static-factory-methods&quot;&gt;static factory method&lt;/a&gt; to describe the new object.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AccountAdaptor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
