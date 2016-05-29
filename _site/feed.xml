@@ -6,8 +6,8 @@
 </description>
     <link>http://rex-zhou.github.io/</link>
     <atom:link href="http://rex-zhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 29 May 2016 13:44:31 +0800</pubDate>
-    <lastBuildDate>Sun, 29 May 2016 13:44:31 +0800</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 13:46:58 +0800</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 13:46:58 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -64,7 +64,7 @@
 &lt;p&gt;Someone like to separate the code to safe part(with null checking) and non-safe part(without null checking), it is also a great practice and easy for testing and simulation. But the code should be well encapsulated to prevent mistake. I really like the design in &lt;a href=&quot;https://kotlinlang.org/&quot;&gt;Kotlin&lt;/a&gt; that if you assign a null to the subclass of Any() and the code could not compile.&lt;/p&gt;
 
 &lt;h1 id=&quot;data-object&quot;&gt;Data object&lt;/h1&gt;
-&lt;p&gt;If you working on the system which based on a data flow the data object could be seen everywhere. Lots of business logic come with those data objects. Someone like to use an interface to hidden the data object behind but it always bring some unnecessary fields and conditions. To work with legacy code, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Adapter_pattern&quot;&gt;adaptor pattern&lt;/a&gt; sometimes is useful for data conversion. Better to create the new object with a (factory method pattern)[https://en.wikipedia.org/wiki/Factory_method_pattern] or &lt;a href=&quot;http://stackoverflow.com/questions/929021/what-are-static-factory-methods&quot;&gt;static factory method&lt;/a&gt; to describe the new object.&lt;/p&gt;
+&lt;p&gt;If you working on the system which based on a data flow the data object could be seen everywhere. Lots of business logic come with those data objects. Someone like to use an interface to hidden the data object behind but it always bring some unnecessary fields and conditions. To work with legacy code, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Adapter_pattern&quot;&gt;adaptor pattern&lt;/a&gt; sometimes is useful for data conversion. Better to create the new object with a &lt;a href=&quot;https://en.wikipedia.org/wiki/Factory_method_pattern&quot;&gt;factory method pattern&lt;/a&gt; or &lt;a href=&quot;http://stackoverflow.com/questions/929021/what-are-static-factory-methods&quot;&gt;static factory method&lt;/a&gt; to describe the new object.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AccountAdaptor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AccountAdaptor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OldAccount&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -82,6 +82,7 @@
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;If you want to talk more about how to work with the legacy code, welcome to send me a email.&lt;/p&gt;
 </description>
         <pubDate>Sat, 28 May 2016 18:30:00 +0800</pubDate>
         <link>http://rex-zhou.github.io/2016/05/28/Working-with-legacy-code.html</link>

@@ -57,7 +57,7 @@ First you have to think if it is valid to get a null reference of `AccountInfo` 
 Someone like to separate the code to safe part(with null checking) and non-safe part(without null checking), it is also a great practice and easy for testing and simulation. But the code should be well encapsulated to prevent mistake. I really like the design in [Kotlin](https://kotlinlang.org/) that if you assign a null to the subclass of Any() and the code could not compile.
 
 #Data object
-If you working on the system which based on a data flow the data object could be seen everywhere. Lots of business logic come with those data objects. Someone like to use an interface to hidden the data object behind but it always bring some unnecessary fields and conditions. To work with legacy code, the [adaptor pattern](https://en.wikipedia.org/wiki/Adapter_pattern) sometimes is useful for data conversion. Better to create the new object with a (factory method pattern)[https://en.wikipedia.org/wiki/Factory_method_pattern] or [static factory method](http://stackoverflow.com/questions/929021/what-are-static-factory-methods) to describe the new object.
+If you working on the system which based on a data flow the data object could be seen everywhere. Lots of business logic come with those data objects. Someone like to use an interface to hidden the data object behind but it always bring some unnecessary fields and conditions. To work with legacy code, the [adaptor pattern](https://en.wikipedia.org/wiki/Adapter_pattern) sometimes is useful for data conversion. Better to create the new object with a [factory method pattern](https://en.wikipedia.org/wiki/Factory_method_pattern) or [static factory method](http://stackoverflow.com/questions/929021/what-are-static-factory-methods) to describe the new object.
 {% highlight java %}
 class AccountAdaptor {
   private AccountAdaptor(OldAccount account) {
@@ -75,3 +75,5 @@ class AccountAdaptor {
   }
 }
 {% endhighlight %}
+
+If you want to talk more about how to work with the legacy code, welcome to send me a email. 
